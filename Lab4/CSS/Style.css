@@ -1,0 +1,319 @@
+﻿* {
+}
+
+h1 {
+    align-content: center;
+    font-family: Garamond;
+    font-weight: bold;
+    font-size: 2em;
+    color: #262a2d;
+}
+
+h2 {
+    align-content: center;
+    font-family: Garamond;
+    font-weight: bold;
+    font-size: 2em;
+    color: #262a2d;
+    text-align: center;
+}
+
+/*===================|Header|====================*/
+header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background: #637658;
+    /*grid*/
+    display: grid;
+    justify-content: space-evenly;
+    align-content: center;
+    grid-template-columns: 3vw max-content max-content 1fr max-content 3vw;
+}
+
+    header ul {
+        list-style-type: none;
+    }
+
+    header li {
+        display: inline-block;
+        padding: 10px;
+        /*border*/
+        border-left: 2px solid #333b3b;
+        border-right: 2px solid #333b3b;
+    }
+
+    header a {
+        text-decoration: none;
+        font-family: Trebuchet MS;
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #262a2d;
+    }
+
+        header a:hover {
+            color: #4f8530;
+            text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+        }
+
+nav {
+    align-content: center;
+}
+
+#logo {
+    height: 5vw;
+    min-height: 10vh;
+    margin: auto 10px;
+    grid-column-start: 2;
+}
+
+#button_join{
+    margin: auto;
+    padding: 10px;
+    border: 4px solid #2ab216;
+    border-radius: 15px;
+    aspect-ratio: 2 / 1;
+    /*transition*/
+    transition: all 0.3s;
+    /*font*/
+    font-family: Trebuchet MS;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2ab216;
+}
+
+    #button_join:hover {
+        color: #6ce05a;
+        border-color: #6ce05a;
+        background-color: #2f4424;
+        cursor: pointer;
+    }
+/*=======================| MAIN |======================*/
+main {
+    font-size: 1.5em;
+}
+/*Main head*/
+#head {
+    position: sticky;
+    top: 50px;
+    z-index: -1;
+    height: 75vh;
+    padding: 25px;
+    /*background*/
+    background-image: url('../Media/Backround.jpg');
+    background-position: center;
+    background-size: cover;
+    /*children*/
+    align-content: center;
+    color: #aab7ca;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+    #head p {
+        font-family: Trebuchet MS;
+        font-size: 2em;
+    }
+
+/*Main sections*/
+#main_sections {
+    padding: 5vw 10vw 15vw 10vw;
+    background-color: #c8caaa;
+    background-image: linear-gradient(to left top, #00000000 50%, #93917f 90%), linear-gradient(to bottom right, #00000000 60%, #bdb64c);
+}
+
+    #main_sections section {
+        padding: 25px;
+        margin: 25px;
+        /*border*/
+        border: 2px dashed #b0a581;
+        border-radius: 20%;
+        background-image: linear-gradient(to right, #aeac957e, #9192827e);
+    }
+
+
+/*----------EXP & projects----------------*/
+#our_exp {
+}
+
+#our_projects, #our_exp {
+    scroll-margin-top: 10vh;
+}
+
+#projects {
+    margin: 0 10vw 5vw 10vw;
+}
+
+    #projects video {
+        width: 100%;
+        background-color: #000000;
+        /*border*/
+        border-radius: 7% 0 / 15% 0;
+        border-width: 6px 4px;
+        border-style: solid;
+        border-color: black;
+    }
+
+/*-----------Team-------------*/
+#our_team {
+    position: relative;
+    scroll-margin-top: 15vh;
+}
+    #our_team span{
+        font-weight:bold;
+    }
+
+    #team {
+        /*grid*/
+        display: inline-grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 10px;
+    }
+
+.coworker {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    /*transition*/
+    transition: all 0.4s;
+    /*border*/
+    box-sizing: border-box;
+    border-radius: 11%;
+    border-width: 6px 4px;
+    border-style: solid;
+    border-color: black;
+}
+
+    .coworker img {
+        position: relative;
+        width: 100%;
+        background-color: black;
+        /*border*/
+        box-sizing: border-box;
+        border-radius: 10%;
+        border-width: 4px 4px;
+        border-style: solid;
+        border-color: black;
+    }
+
+    .coworker p {
+        position: absolute;
+        bottom: 10px;
+        padding: 10%;
+        margin: 0;
+        /*font*/
+        font-family: Georgia;
+        color: #262a2d;
+    }
+
+    .coworker:hover {
+        z-index: 1;
+        transform: scale(1.2);
+        top: 1vw;
+        height: 130%;
+        background: #637658;
+        box-shadow: inset 0 0 20px 0 black;
+    }
+
+/*    ===============================|Form|=============================*/
+
+form, #join_menu {
+    display: none;
+    /**/
+    position: fixed;
+    top: 15vh;
+    right: 50vw;
+    transform: translateX(50%);
+    z-index: 6;
+    /**/
+    width: 50%;
+    height: max-content;
+    padding: 50px;
+    /*visual*/
+    background-color: #00cd9c7f;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 10px -10px 20px 0 #202b3aff, inset -10px 10px 30px 0 #acbbcfda;
+    /*border*/
+    border: 5px solid #0f2638;
+    border-radius: 25px;
+}
+
+.form_label {
+    display: inline-block;
+    width: 30%;
+    margin-left: 25px;
+    text-align: right;
+}
+
+button, input, select {
+    background-image: linear-gradient(to right, #359acec7, #135f7cc7);
+    color: black !important;
+    border-radius: 5px;
+}
+
+button:hover{
+
+    color: black;
+    cursor: pointer;
+}
+
+.form_field {
+    width: 60%;
+}
+
+form span {
+    margin-left: 10px;
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+form div, textarea {
+    margin: 20px 0;
+}
+
+/*=======================|Footer|=======================*/
+footer {
+    background: #637658;
+    font-size: 1.5em;
+    /*grid*/
+    display: grid;
+    grid-template-columns: 3vw repeat( 2, 1fr) 3vw;
+}
+
+    footer > div {
+        grid-column-start: 2;
+    }
+
+#social_block {
+    position: relative;
+    grid-column-start: 3;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+    #social_block img {
+        min-height: 50px;
+        max-height: 10vh;
+        margin: auto 2vw;
+        /*transition*/
+        border-radius: 50%;
+        transition: all 0.3s;
+    }
+
+        #social_block img:hover {
+            box-shadow: 0 0 20px 0 #dedfda;
+            cursor: pointer;
+        }
