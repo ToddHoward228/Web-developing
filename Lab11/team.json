@@ -1,0 +1,30 @@
+[
+  {
+    "position": "Бекендер",
+    "name": "Алі Ахмад Хасан",
+    "age": 33,
+    "photo": "shrek2.jpg",
+    "likes": 2
+  },
+  {
+    "position": "Тестувальник",
+    "name": "Аман Кумар Шарма",
+    "age": 25,
+    "photo": "shrek1.jpg",
+    "likes": 1
+  },
+  {
+    "position": "TeamLead",
+    "name": "Рахім Саїд Фарук",
+    "age": 26,
+    "photo": "shrek3.jpg",
+    "likes": 3
+  },
+  {
+    "position": "Менеджер",
+    "name": "Ніха Патель Сінгх",
+    "age": 45,
+    "photo": "shrek4.jpg",
+    "likes": 0
+  }
+]

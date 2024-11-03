@@ -1,0 +1,226 @@
+﻿:root {
+    --l-clr: #77c7ac;
+    --r-clr: #289671;
+    --l-war-clr: #187e58;
+    --r-war-clr: #146d6a;
+    --war-clr: #9c3939;
+    --glass: #00cd9c7f;
+}
+
+/*=================|Calculator|=================*/
+
+    #calculator form {
+        display: flex;
+        border: 3px solid #0c2435;
+        border-radius: 20px;
+        align-items: center;
+        flex-direction: column;
+        background-color: var(--glass);
+    }
+
+        #calculator form > div:not(#calc_add_info) {
+            width: 100%;
+        }
+
+        #calc_result {
+            display: inline-block;
+            padding: 3px 15px;
+            border: 2px solid #0c2435;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+/*----------addition info-------------*/
+#calc_add_info, #facts_cntnr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 3px solid #0c2435;
+    border-radius: 20px;
+    align-items: center;
+    background-color: var(--glass);
+    width: fit-content;
+    margin: auto;
+}
+
+/*----------toggle switch-------------*/
+
+.toggle_switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+/*border*/
+    border-radius: 12px;
+    border: 2px solid white;
+/*visual*/
+    background-image: linear-gradient(to right, #acbbcfda, #939393);
+}
+
+    .toggle_switch:has(input:checked) {
+        background-image: linear-gradient(to right, var(--l-clr), var(--r-clr));
+    }
+
+
+toggle_switch span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.toggle_switch span:before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 5px;
+    transition: transform 0.4s;
+}
+
+.toggle_switch input {
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+    .toggle_switch input:checked + span:before {
+        transform: translateX(26px);
+    }
+/*====================|Form|====================*/
+.hidden_form {
+    display: none;
+    /**/
+    position: fixed;
+    top: 50vh;
+    right: 50vw;
+    transform: translate(50%, -50%);
+    z-index: 6;
+    /**/
+    width: 50%;
+    height: max-content;
+}
+
+.glass {
+    padding: 25px 7vw;
+    /*visual*/
+    background-color: var(--glass);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 10px -10px 20px 0 #202b3aff, inset -10px 10px 30px 0 #acbbcfda;
+    /*border*/
+    border: 5px solid #0f2638;
+    border-radius: 25px;
+}
+
+.hidden_form::before {
+    content: '';
+    background-color: #000000cc;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 100vw;
+    height: 100vh;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #6f6956;
+    opacity: 1; /* Firefox */
+}
+
+button, input, select, textarea, .form_element {
+    background-image: linear-gradient(to right, var(--l-clr), var(--r-clr));
+    border-radius: 5px;
+    margin: 7px;
+}
+
+button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.form_label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+.form_field {
+    width: 60%;
+}
+
+.form_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6em;
+    margin: 0.5em 0;
+    color: #06151f;
+}
+
+.form_buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+
+
+/*text*/
+form p, form span, button, input, select, textarea, label {
+    color: #0c2435;
+}
+
+@media (orientation: portrait) {
+
+    form p, form span, button, input, select, textarea, label {
+        font-size: 14px;
+    }
+
+    button, input, select, textarea {
+        margin: 4px 7px;
+    }
+
+    form, #join_menu {
+        width: 90%;
+        --top_retreat: 5vh;
+    }
+
+        form::before, #join_menu::before {
+            transform: translate(50%, -5vh);
+        }
+
+
+    #calculator {
+        padding: 0;
+    }
+}
+
+/* ====================== Validation ======================*/
+.has-error {
+    display: block;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: .875em;
+    color: var(--war-clr);
+}
+
+.form_error {
+    background-image: linear-gradient(to right, var(--l-war-clr), var(--r-war-clr));
+    border-color: var(--war-clr);
+}
+
+    .form_error::placeholder {
+        color: var(--war-clr);
+    }
