@@ -1,0 +1,15 @@
+{
+  "name": "nodejs_webdeveloping",
+  "version": "1.0.0",
+  "description": "Program for university course",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Timofey",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}
