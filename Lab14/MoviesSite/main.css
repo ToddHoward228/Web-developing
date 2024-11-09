@@ -1,0 +1,73 @@
+﻿
+
+body {
+    font-size: 2rem;
+    background-color: #746b7d;
+}
+
+main {
+    position: relative;
+    margin: 3vh auto;
+    padding: min(5vw, 5vh);
+    width: 80vw;
+    background-color: #3b3248;
+    border-radius: 15px;
+}
+
+form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+label {
+    width: 7vw;
+}
+
+input, select {
+    font-size: 1rem;
+    margin: 0 25px;
+    flex-grow: 1;
+    height: 2rem;
+}
+
+    input[type="button"]{
+        width: 7vw;
+        flex-grow: 0;
+    }
+
+#buttons_container{
+    display:flex;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    font: 2rem "Times New Roman";
+    margin: 15px 50px;
+    background-color: #445cc7;
+}
+
+    button img{
+        height: 2rem;
+        margin: 0 10px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+th {
+    background: #5767b1;
+    border: 3px outset #24378d
+}
+
+td {
+    text-align: center;
+    background: #8d9eeb;
+    border: 3px inset #445cc7
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lab14",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon db.js",
+    "start": "node db.js",
+    "client": "node client_db.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Timofey",
+  "license": "ISC",
+  "description": "Робота з базами даних в Node.js",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "mysql": "^2.18.1",
+    "pg": "^8.13.1"
+  }
+}
